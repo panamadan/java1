@@ -2,7 +2,7 @@ function generatePassword() {
     var length = 8,
         charset = "",
         uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        lower = "abcdefghijklmnopqrstuvwxyz",
+        lowercase = "abcdefghijklmnopqrstuvwxyz",
         numeric = "0123456789",
         special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~" + '""',
         retVal = "";
@@ -12,8 +12,19 @@ function generatePassword() {
            charset += uppercase 
         }
 
+        var lowercase = prompt("Do you want lower case latters in your password?");
+        if (lowerCaseprompt === true) {
+           charset += lowercase 
+        }
+        var numeric = prompt("Do you want numeric in your password?");
+        if (numericprompt === true) {
+           charset += numeric 
+        }
+        var specialprompt = prompt("Do you want special characters in your password?");
+        if (specialprompt === true) {
+           charset += special 
+        }
 
-// repeate for the 3 others
 
 
 // add innertext for id=password for inside the box to generate the passwor
@@ -30,6 +41,7 @@ generateButton.addEventListener("click", function () {
     
     console.log(generatePassword());
 })
+
 
 
 
